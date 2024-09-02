@@ -1,0 +1,17 @@
+@media(max-width:991px){
+    .mobile-header{
+        @apply block
+    }
+}
+@media(min-width:992px){
+    .xl-header{
+        @apply flex
+    }
+}
+.trial-btn{
+    box-shadow: 0px 4px 0px 0px #5842bc;
+    filter: drop-shadow(0 13px 20px #07397235);
+}
+.header-nav-transition{
+    @apply transition-all duration-200
+}
