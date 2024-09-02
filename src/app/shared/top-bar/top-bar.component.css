@@ -1,0 +1,5 @@
+@media(min-width:992px){
+    .md-top-bar{
+        @apply !text-[10px]
+    }
+}
