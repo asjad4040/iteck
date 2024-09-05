@@ -1,50 +1,81 @@
-<section class="w-full bg-[#e7f1ff] flex justify-between items-center py-5 px-4 border-b border-b-gray-500 border-solid border-opacity-70">
-    <div class="w-40%">
-        <a href="">
-            <img src="/assets/header/main-logo.png" alt="main-logo">
-        </a>
-    </div>
-    <div class="border-2 border-gray-600 border-opacity-70 border-solid py-2 px-3 rounded-md hidden mobile-header">
-        <i class="fa-solid fa-bars fa-xl" style="color: #999999;"></i>
-    </div>
-    <div class="hidden xl-header items-center w-full justify-between gap-x-8">
-        <div></div>
-        <div class="flex items-center gap-x-4 text-xs font-bold">
-            <div class="flex items-center gap-x-1 text-[#157efb] p-4">
-                <span>Home</span>
-                <i class="fa-solid fa-chevron-down text-[8px]"></i>
-            </div>
-            <div class="flex items-center gap-x-1 p-4 hover:text-[#157efb] header-nav-transition">
-                <span>Pages</span>
-                <i class="fa-solid fa-chevron-down text-[8px]"></i>
-            </div>
-            <a href="" class="p-4">
-                <span class="hover:text-[#157efb] header-nav-transition">Portfolio</span>
-            </a>
-            <div class="flex items-center gap-x-1 p-4">
-                <a href="">
-                    <span class="hover:text-[#157efb] header-nav-transition">Blog</span>
-                </a>
-                <span class="text-white bg-[#157efb] !text-[10px] size-[20px] rounded-2xl px-4 flex items-center justify-center">3</span>
-            </div>
-            <a href="" class="p-4 hover:text-[#157efb] header-nav-transition">
-                Contact Us
-            </a>
-        </div>
-        <div class="flex items-center gap-x-3 text-xs font-bold">
-            <div class="flex items-center gap-1 hover:text-[#157efb] header-nav-transition">
-                <i class="fa-regular fa-user"></i>
-                <a href="">
-                    <span>Sign In</span>
-                </a>
-            </div>
+<section
+    class="w-full bg-[#e7f1ff] flex flex-col   border-b border-b-gray-500 border-solid border-opacity-70">
+    <!-- front mobile header view -->
+    <div class="w-full flex justify-between items-center py-5 px-4">
+        <div class="w-40%">
             <a href="">
-                <div class="flex items-center gap-x-1 text-white bg-[#157efb] hover:bg-[#4a00e1] py-[10px] px-[25px] trial-btn rounded-full cursor-pointer transition-all duration-200">
-                    <span>Start Free Trial</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
+                <img src="/assets/header/main-logo.png" alt="main-logo">
             </a>
         </div>
-        
+        <div class="border-2 border-gray-600 border-opacity-70 border-solid py-2 px-3 rounded-md hidden mobile-header">
+            <i class="fa-solid fa-bars fa-xl" style="color: #999999;"></i>
+        </div>
+        <!-- nav links section for desktop header -->
+        <div class="hidden xl-header items-center w-full justify-between gap-x-8">
+            <div></div>
+            <div class="flex items-center gap-x-4 text-xs font-bold">
+                <div class="flex items-center gap-x-1 text-[#157efb] p-4">
+                    <span>Home</span>
+                    <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </div>
+                <div class="flex items-center gap-x-1 p-4 hover:text-[#157efb] header-nav-transition">
+                    <span>Pages</span>
+                    <i class="fa-solid fa-chevron-down text-[8px]"></i>
+                </div>
+                <a href="" class="p-4">
+                    <span class="hover:text-[#157efb] header-nav-transition">Portfolio</span>
+                </a>
+                <div class="flex items-center gap-x-1 p-4">
+                    <a href="">
+                        <span class="hover:text-[#157efb] header-nav-transition">Blog</span>
+                    </a>
+                    <span
+                        class="text-white bg-[#157efb] !text-[10px] size-[20px] rounded-2xl px-4 flex items-center justify-center">3</span>
+                </div>
+                <a href="" class="p-4 hover:text-[#157efb] header-nav-transition">
+                    Contact Us
+                </a>
+            </div>
+            <div class="flex items-center gap-x-3 text-xs font-bold">
+                <div class="flex items-center gap-1 hover:text-[#157efb] header-nav-transition">
+                    <i class="fa-regular fa-user"></i>
+                    <a href="">
+                        <span>Sign In</span>
+                    </a>
+                </div>
+                <a href="">
+                    <div
+                        class="flex items-center gap-x-1 text-white bg-[#157efb] hover:bg-[#4a00e1] py-[10px] px-[25px] trial-btn rounded-full cursor-pointer transition-all duration-200">
+                        <span>Start Free Trial</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- mobile menu accordion panel -->
+    <div class="bg-[#fff9] py-[15px] mt-5 flex flex-col w-full">
+        <div class="flex items-center gap-x-1 text-[#157efb] p-4">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[8px]"></i>
+        </div>
+        <div class="flex items-center gap-x-1 p-4 hover:text-[#157efb] header-nav-transition">
+            <span>Pages</span>
+            <i class="fa-solid fa-chevron-down text-[8px]"></i>
+        </div>
+        <a href="" class="p-4">
+            <span class="hover:text-[#157efb] header-nav-transition">Portfolio</span>
+        </a>
+        <div class="flex items-center gap-x-1 p-4">
+            <a href="">
+                <span class="hover:text-[#157efb] header-nav-transition">Blog</span>
+            </a>
+            <span
+                class="text-white bg-[#157efb] !text-[10px] size-[20px] rounded-2xl px-4 flex items-center justify-center">3</span>
+        </div>
+        <a href="" class="p-4 hover:text-[#157efb] header-nav-transition">
+            Contact Us
+        </a>
     </div>
 </section>
