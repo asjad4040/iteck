@@ -1,5 +1,5 @@
 <section
-    class="w-full bg-[#e7f1ff] flex flex-col   border-b border-b-gray-500 border-solid border-opacity-70">
+    class="w-full bg-[#e7f1ff] flex flex-col   border-b border-b-gray-500 border-solid border-opacity-70 overflow-hidden">
     <!-- front mobile header view -->
     <div class="w-full flex justify-between items-center py-5 px-4">
         <div class="w-40%">
@@ -7,7 +7,7 @@
                 <img src="/assets/header/main-logo.png" alt="main-logo">
             </a>
         </div>
-        <div class="border-2 border-gray-600 border-opacity-70 border-solid py-2 px-3 rounded-md hidden mobile-header">
+        <div class="border-2 border-gray-600 border-opacity-70 border-solid py-2 px-3 rounded-md hidden mobile-header" (click)="toggleAccordion()">
             <i class="fa-solid fa-bars fa-xl" style="color: #999999;"></i>
         </div>
         <!-- nav links section for desktop header -->
@@ -55,27 +55,42 @@
         </div>
     </div>
     <!-- mobile menu accordion panel -->
-    <div class="bg-[#fff9] py-[15px] mt-5 flex flex-col w-full">
-        <div class="flex items-center gap-x-1 text-[#157efb] p-4">
+    <div class="bg-[#fff9]   flex flex-col  !text-xs !font-bold *:px-4 *:py-2  max-h-0 overflow-hidden transition-all duration-200" [ngClass]="{'max-h-[20rem] mt-3 mx-3 mb-5 py-[15px]':isAccordion}">
+        <div class="flex items-center gap-x-1 text-[#157efb]">
             <span>Home</span>
             <i class="fa-solid fa-chevron-down text-[8px]"></i>
         </div>
-        <div class="flex items-center gap-x-1 p-4 hover:text-[#157efb] header-nav-transition">
+        <div class="flex items-center gap-x-1 hover:text-[#157efb] header-nav-transition">
             <span>Pages</span>
             <i class="fa-solid fa-chevron-down text-[8px]"></i>
         </div>
-        <a href="" class="p-4">
+        <a href="" class="">
             <span class="hover:text-[#157efb] header-nav-transition">Portfolio</span>
         </a>
-        <div class="flex items-center gap-x-1 p-4">
+        <div class="flex items-center gap-x-1">
             <a href="">
                 <span class="hover:text-[#157efb] header-nav-transition">Blog</span>
             </a>
             <span
                 class="text-white bg-[#157efb] !text-[10px] size-[20px] rounded-2xl px-4 flex items-center justify-center">3</span>
         </div>
-        <a href="" class="p-4 hover:text-[#157efb] header-nav-transition">
+        <a href="" class="hover:text-[#157efb] header-nav-transition">
             Contact Us
         </a>
+        <div class="flex items-center gap-x-3 text-xs font-bold">
+            <div class="flex items-center gap-1 hover:text-[#157efb] header-nav-transition">
+                <i class="fa-regular fa-user"></i>
+                <a href="">
+                    <span>Sign In</span>
+                </a>
+            </div>
+            <a href="">
+                <div
+                    class="flex items-center gap-x-1 text-white bg-[#157efb] hover:bg-[#4a00e1] py-[10px] px-[25px] trial-btn rounded-full cursor-pointer transition-all duration-200">
+                    <span>Start Free Trial</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
     </div>
 </section>
