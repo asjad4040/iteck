@@ -1,0 +1,40 @@
+.gradient-bg{
+    background: linear-gradient(to top, #ffffff 0%, #edf4fe 74%, #e7f1ff 100%)
+}
+.chart-animation{
+    animation: scale_up_down 1.5s ease-in-out infinite alternate both;
+    transition: all 0.3s ease;
+}
+@keyframes scale_up_down {
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.cricle-chart-styles{
+    filter: drop-shadow(0 20px 60px #0005);
+    animation: rotate-center 50s linear infinite both;
+    transition: all 0.3s ease;
+}
+@keyframes rotate-center {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.hand-animations{
+    animation: slide_up_down 2s ease-in-out infinite alternate both;
+}
+@keyframes slide_up_down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
