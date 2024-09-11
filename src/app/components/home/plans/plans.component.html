@@ -1,0 +1,228 @@
+<section class="py-[100px] tailwind-container">
+    <div class="mb-[60px] text-center">
+        <h2 class="text-[30px] tracking-[3px] mb-[20px] font-bold xl:text-[45px]">
+            Choose Plan and
+            <span class="text-[#157efb] px-[10px] title-underline relative">
+                Kick-start
+            </span>
+        </h2>
+        <p class="text-[#666] text-[15px]">Whether you’re just getting started with rapid testing or scaling across the
+            organization, we’ve got you covered.</p>
+    </div>
+    <div class="flex w-full items-center mx-auto bg-[#edf2fa] p-[7px] rounded-[50px] text-xs font-bold relative xl:w-[35%]">
+        <span class="w-1/2 text-center py-[10px] px-[15px]" (click)="togglePlan('monthly')"
+            [ngClass]="{'relative z-10':isMonthlyPlan}">
+            Billed Monthly
+        </span>
+        <span class="w-1/2 flex gap-x-1 items-center justify-center py-[10px] px-[15px]" (click)="togglePlan('yearly')"
+            [ngClass]="{'relative z-10':isYearlyPlan}">
+            <span>
+                Billed Yearly
+            </span>
+            <span class="py-[1px] px-[5px] text-[12px] rounded-[50px] text-[#dc3545] bg-[#f8d7da] font-bold">-15%</span>
+        </span>
+        <div class="absolute w-1/2 bg-white h-[80%] rounded-[50px] toggle-btn-shadow translate-x-0 transition-all duration-200"
+            [ngClass]="{'translate-x-[90%]':isYearlyPlan}"></div>
+    </div>
+    <div class="overflow-x-auto">
+        <div class="w-full min-w-[800px] mt-[50px]">
+            <table class="w-full">
+                <tr class="!border-b !border-b-[#7f7f7f] !border-solid w-full">
+                    <td class="w-[34%]">
+                        <div>
+                            <img src="/assets/home-page/plans-bucket.png" alt="plans-bucket">
+                        </div>
+                    </td>
+                    <td class="w-[22%]">
+                        <div class="flex flex-col items-center justify-center py-[30px]">
+                            <span class="text-xs font-bold uppercase mb-[10px]">Basic</span>
+                            <div class="flex gap-x-2 mb-[5px] items-baseline">
+                                <span class="text-[45px] font-bold">Free</span>
+                                <span class="text-lg text-[#999]">/yr</span>
+                            </div>
+                            <small class="text-[11px] text-[#666]">Free forever.!</small>
+                            <small class="text-[11px] text-[#666]">No credit card required.</small>
+                        </div>
+                    </td>
+                    <td class="relative w-[22%]">
+                        <div class="flex flex-col items-center justify-center py-[30px]">
+                            <span class="text-xs font-bold uppercase mb-[10px]">Premium Plan</span>
+                            <div class="flex gap-x-2 items-baseline mb-[5px]">
+                                <span class="text-[45px] font-bold text-[#157efb]">$49</span>
+                                <span class="text-lg text-[#999]">/yr</span>
+                            </div>
+                            <small class="text-[11px] text-[#666]">Free forever.!</small>
+                            <small class="text-[11px] text-[#666]">No credit card required.</small>
+                        </div>
+                        <div class="absolute top-[-30px] right-[15px] z-[5]">
+                            <div class="discount-bg size-[60px] text-xs text-white font-bold flex text-center items-center">
+                                Best Choice
+                            </div>
+                        </div>
+                    </td>
+                    <td class="w-[22%]">
+                        <div class="flex flex-col items-center justify-center py-[30px]">
+                            <span class="text-xs font-bold uppercase mb-[10px]">Ultimate</span>
+                            <div class="flex gap-x-2 items-baseline mb-[5px]">
+                                <span class="text-[45px] font-bold">$99</span>
+                                <span class="text-lg text-[#999]">/yr</span>
+                            </div>
+                            <small class="text-[11px] text-[#666]">Free forever.!</small>
+                            <small class="text-[11px] text-[#666]">No credit card required.</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Unlimited Projects
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">Lifetime Support & SEO Experts Consult</td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Advance Dashboard
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Data Security & Backup
+                    </td>
+                    <td class="text-center">200 GB</td>
+                    <td class="text-center">1 TB</td>
+                    <td class="text-center">1 TB</td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Cloud Hosting & Domain
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Free Google Analysis
+                    </td>
+                    <td class="text-center">
+                        $5/Year
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Multi-Vendor Marketplace Support
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Seller App
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Auto Lifetime Upgrade
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-[16px] py-[15px] text-[#212529]">
+                        Free SSL Certificate
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check text-[#157efb] !flex justify-center"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="pt-[30px] pb-[50px] text-center">
+                        <a class="py-[10px] px-[25px] bg-[#157efb] text-xs text-white rounded-full mt-14 font-bold demo-book-btn text-center">
+                            <span>Book A Free Demo</span>
+                        </a>
+                    </td>
+                    <td class="pt-[30px] pb-[50px] text-center">
+                        <a class="py-[10px] px-[25px] bg-[#157efb] text-xs text-white rounded-full mt-14 font-bold demo-book-btn text-center">
+                            <span>Book A Free Demo</span>
+                        </a>
+                    </td>
+                    <td class="pt-[30px] pb-[50px] text-center">
+                        <a class="py-[10px] px-[25px] bg-[#157efb] text-xs text-white rounded-full mt-14 font-bold demo-book-btn text-center">
+                            <span>Book A Free Demo</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+.front-rays-animation{
+    animation: rotate-center 20s linear infinite both reverse;
+}
+@keyframes rotate-center {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.reasons-dashboard{
+    animation: slide_up_down 3s ease-in-out infinite alternate both;
+}
+@keyframes slide_up_down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+.title-underline::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #157efb;
+    opacity: 8%;
+}

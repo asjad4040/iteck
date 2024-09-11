@@ -21,3 +21,29 @@
         transform: scale(1);
     }
 }
+.front-rays-animation{
+    animation: rotate-center 20s linear infinite both reverse;
+}
+@keyframes rotate-center {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.reasons-dashboard{
+    animation: slide_up_down 3s ease-in-out infinite alternate both;
+}
+@keyframes slide_up_down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.exp-card-a > *{
+    @apply relative text-[15px] font-bold border-b border-b-[#9993] border-solid py-[13px] w-full
+}

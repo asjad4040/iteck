@@ -1,0 +1,26 @@
+<section class="py-[100px] tailwind-container bg-[#f3f7fe]">
+    <div class="mb-[60px] text-center">
+        <h2 class="text-[30px] tracking-[3px] mb-[20px] font-bold xl:text-[45px]">
+            Other Awesome 
+            <span class="text-[#157efb] px-[10px] title-underline relative">
+                Features
+            </span>
+        </h2>
+        <p class="text-[15px] text-[#666]">
+            Iteck Dashboard is a powerhouse when it comes to the feature list. This ensures you have every functionality you need to build, run, and expand your marketplace
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        @for (item of featureCardArr; track $index) {
+            <a class="p-10 !bg-white text-center rounded-2xl flex flex-col justify-center items-center">
+                <div class="mb-10">
+                    <img [src]="item.imgUrl" alt="feature-images" class="size-20">
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-[15px]">{{item.title}}</h5>
+                    <p class="text-xs text-[#777] leading-[1.8]">{{item.para}}</p>
+                </div>
+            </a>
+        }
+    </div>
+</section>
