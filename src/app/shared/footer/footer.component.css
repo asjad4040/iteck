@@ -1,0 +1,3 @@
+.social-links>*{
+    @apply size-[35px] bg-[#eef4f8] inline-flex justify-center items-center rounded-[50%]
+}

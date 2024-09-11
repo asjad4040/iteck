@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
@@ -9,7 +9,27 @@ import { SwiperOptions } from 'swiper/types';
   styleUrl: './testimonials.component.css',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class TestimonialsComponent {
+export class TestimonialsComponent implements AfterViewInit {
+  @ViewChild('mySwiper') swiper2!: ElementRef<any>;
+  ngAfterViewInit() {
+    const swiperParams = {
+      breakpoints: {
+        100: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    };
+
+    // now we need to assign all parameters to Swiper element
+    Object.assign(this.swiper2.nativeElement, swiperParams);
+    this.swiper2.nativeElement.initialize();
+  }
   testinmonialsArr=[
     {
       starNo:5,
